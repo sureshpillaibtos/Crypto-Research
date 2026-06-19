@@ -28,6 +28,7 @@ st.set_page_config(
     layout="wide"
 )
 
+#st.sidebar.image("sp.jpg")
 st.sidebar.title("🇮🇳 Crypto Research")
 
 page = st.sidebar.radio(
@@ -251,6 +252,7 @@ df = df.sort_values(
 if page == "Home":
 
     st.title("🚀 Crypto Research Dashboard")
+    st.image("sp.jpg")
 
     st.markdown("""
     Welcome to the Crypto Research Dashboard.
@@ -263,6 +265,7 @@ if page == "Home":
     • Quality Scores
     • Valuation Scores
     • Conviction Levels
+    • Coin Prediction etc
     """)
 
 elif page == "Coin Rankings":
