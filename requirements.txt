@@ -2,6 +2,7 @@ streamlit
 plotly
 yfinance
 CoinGeckoAPI
+pycoingecko
 pandas
 numpy
 requests
