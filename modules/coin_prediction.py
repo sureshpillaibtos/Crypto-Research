@@ -958,7 +958,7 @@ def show_coin_prediction():
         recommendation_range = result['recommendation_range']
 
         st.success(
-            f"Recommendation 11: {recommendation_range}"
+            f"Recommendation: {recommendation_range}"
         )
         
         # Add Buy Zone & Sell Zone
