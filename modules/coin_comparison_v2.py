@@ -219,6 +219,141 @@ def show_coin_comparison_v2():
         ):
 
             coin2_points += 1
+        
+        #### Category ###############
+        st.subheader(
+            "🏅 Category Winners"
+        )
+        # Confidence score winners
+        if coin1_result["score"] > coin2_result["score"]:
+            confidence_winner = coin1_name
+            st.success(
+                f"Confidence Score: {coin1_name}"
+            )
+
+        elif coin2_result["score"] > coin1_result["score"]:
+            confidence_winner = coin2_name
+            st.success(
+                f"Confidence Score: {coin2_name}"
+            )
+
+        else:
+            confidence_winner = "Tie"
+            st.info(
+                "Confidence Score: Tie"
+            )
+        # RSI Winner
+        coin1_rsi_distance = abs(
+            coin1_result["rsi"] - 50
+        )
+
+        coin2_rsi_distance = abs(
+            coin2_result["rsi"] - 50
+        )
+        #Display
+        if coin1_rsi_distance < coin2_rsi_distance:
+            rsi_winner = coin1_name
+            st.success(
+                f"RSI Health: {coin1_name}"
+            )
+
+        elif coin2_rsi_distance < coin1_rsi_distance:
+            rsi_winner = coin2_name
+            st.success(
+                f"RSI Health: {coin2_name}"
+            )
+
+        else:
+            rsi_winner = "Tie"
+            st.info(
+                "RSI Health: Tie"
+            )
+        # Risk Level Winner
+        risk1 = risk_rank.get(
+            coin1_result["risk_level"],
+            2
+        )
+
+        risk2 = risk_rank.get(
+            coin2_result["risk_level"],
+            2
+        )
+        if risk1 > risk2:
+            risk_winner = coin1_name
+            st.success(
+                f"Risk Level: {coin1_name}"
+            )
+
+        elif risk2 > risk1:
+            risk_winner = coin2_name
+            st.success(
+                f"Risk Level: {coin2_name}"
+            )
+
+        else:
+            risk_winner = "Tie"
+            st.info(
+                "Risk Level: Tie"
+            )
+        # Trend Strength Winner
+        trend1 = trend_rank.get(
+            coin1_result["trend_strength"],
+            3
+        )
+
+        trend2 = trend_rank.get(
+            coin2_result["trend_strength"],
+            3
+        )
+        if trend1 > trend2:
+            trend_winner = coin1_name
+            st.success(
+                f"Trend Strength: {coin1_name}"
+            )
+
+        elif trend2 > trend1:
+            trend_winner = coin2_name
+            st.success(
+                f"Trend Strength: {coin2_name}"
+            )
+
+        else:
+            trend_winner = "Tie"
+            st.info(
+                "Trend Strength: Tie"
+            )
+        # Cleaner Layout
+        col1, col2 = st.columns(2)
+
+        with col1:
+
+            st.metric(
+                "Confidence Winner",
+                confidence_winner,
+                 f"{coin1_result['score']} vs {coin2_result['score']}"
+            )
+
+            st.metric(
+                "RSI Winner",
+                rsi_winner,
+                f"{coin1_result['rsi']:.1f} vs {coin2_result['rsi']:.1f}"
+            )
+
+        with col2:
+
+            st.metric(
+                "Risk Winner",
+                risk_winner,
+                f"{coin1_result['risk_level']} vs {coin2_result['risk_level']}"
+            )
+
+            st.metric(
+                "Trend Winner",
+                trend_winner,
+                f"{coin1_result['trend_strength']} vs {coin2_result['trend_strength']}"
+            )
+
+        #### Category End ###########
         # Display score board
         st.subheader(
             "🏆 Winner Analysis"
