@@ -40,7 +40,8 @@ page = st.sidebar.radio(
         "Coin Details",
         "Portfolio Simulator",
         "Macro Command Center",
-        "Coin Prediction"
+        "Coin Prediction",
+        "Coin Comparison V2"
     ]
 )
 
@@ -5336,4 +5337,12 @@ elif page == "Coin Prediction":
     )
 
     show_coin_prediction()
+
+elif page == "Coin Comparison V2":
+
+    from modules.coin_comparison_v2 import (
+        show_coin_comparison_v2
+    )
+
+    show_coin_comparison_v2()
 
