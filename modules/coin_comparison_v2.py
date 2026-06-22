@@ -330,13 +330,13 @@ def show_coin_comparison_v2():
             st.metric(
                 "Confidence Winner",
                 confidence_winner,
-                 f"{coin1_result['score']} vs {coin2_result['score']}"
+                 f"{coin1_result['score']} &nbsp;&nbsp; vs &nbsp;&nbsp; {coin2_result['score']}"
             )
 
             st.metric(
                 "RSI Winner",
                 rsi_winner,
-                f"{coin1_result['rsi']:.1f} vs {coin2_result['rsi']:.1f}"
+                f"{coin1_result['rsi']:.1f} &nbsp;&nbsp; vs &nbsp;&nbsp; {coin2_result['rsi']:.1f}"
             )
 
         with col2:
@@ -344,13 +344,13 @@ def show_coin_comparison_v2():
             st.metric(
                 "Risk Winner",
                 risk_winner,
-                f"{coin1_result['risk_level']} vs {coin2_result['risk_level']}"
+                f"{coin1_result['risk_level']} &nbsp;&nbsp; vs &nbsp;&nbsp; {coin2_result['risk_level']}"
             )
 
             st.metric(
                 "Trend Winner",
                 trend_winner,
-                f"{coin1_result['trend_strength']} vs {coin2_result['trend_strength']}"
+                f"{coin1_result['trend_strength']} &nbsp;&nbsp; vs &nbsp;&nbsp; {coin2_result['trend_strength']}"
             )
 
         #### Category End ###########
