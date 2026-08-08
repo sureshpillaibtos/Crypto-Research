@@ -1,7 +1,15 @@
 date,event,impact,category
-2026-06-17,FOMC Meeting,High,Fed
-2026-06-25,PCE Inflation,High,Inflation
-2026-07-03,US Jobs Report,High,Employment
-2026-07-14,CPI Inflation,High,Inflation
-2026-07-15,PPI Inflation,High,Inflation
-2026-07-28,FOMC Meeting,High,Fed
+2026-08-07,US Jobs Report,High,Employment
+2026-08-12,CPI Inflation,High,Inflation
+2026-08-13,PPI Inflation,High,Inflation
+2026-08-14,US Retail Sales,Medium,Consumer
+2026-08-19,FOMC Minutes,Medium,Fed
+2026-08-26,US GDP Second Estimate Q2,Medium,GDP
+2026-08-26,PCE Inflation,High,Inflation
+2026-09-04,US Jobs Report,High,Employment
+2026-09-10,PPI Inflation,High,Inflation
+2026-09-11,CPI Inflation,High,Inflation
+2026-09-16,US Retail Sales,Medium,Consumer
+2026-09-16,FOMC Meeting,Very High,Fed
+2026-09-30,US GDP Third Estimate Q2,Medium,GDP
+2026-09-30,PCE Inflation,High,Inflation
