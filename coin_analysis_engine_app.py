@@ -34,7 +34,8 @@ class CoinAnalysisEngineApp:
 
         market = data["market_data"]
 
-        developer = data["developer_data"]
+        #developer = data["developer_data"]
+        developer = data.get("developer_data", {}) # This resolves loading data issue that happend in Aug 30,2026, refer chatGPT soln
 
         return CoinMetrics(
 
